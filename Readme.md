@@ -111,3 +111,16 @@ export TOMCAT_HOME=/opt/tomcat9
 
 vim /opt/tomcat9/conf/server.xml
 
+修改80端口
+
+查看80端口有没有被占用
+
+netstat -tln | grep 80
+
+查看80端口被谁占用
+
+lsof -i :80
+
+kill掉进程
+
+kill -9 进程pid
