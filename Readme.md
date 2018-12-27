@@ -106,3 +106,8 @@ export TOMCAT_HOME=/opt/tomcat9
 启动，打开startup.sh这个文件，根据路径而输入命令，或者直接输入
 
 /opt/tomcat9/bin/startup.sh
+
+修改端口为80
+
+vim /opt/tomcat9/conf/server.xml
+
