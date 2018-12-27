@@ -124,3 +124,31 @@ lsof -i :80
 kill掉进程
 
 kill -9 进程pid
+
+配置Tomcat用户
+
+转到'/ opt / tomcat / conf'目录并使用vim编辑'tomcat-users.xml'文件
+
+cd /opt/tomcat/conf
+
+vim tomcat-users.xml
+
+ 在关闭配置' </ tomcat-users> '之前粘贴以下配置。
+
+<role rolename="manager-gui"/>
+
+<user username="root" password="admin" roles="manager-gui,admin-gui"/>
+
+保存并退出。 
+
+ 现在通过编辑配置'context.xml'文件允许外部访问'manager'仪表板。
+
+cd /opt/tomcat/webapps/manager/META-INF/
+
+vim context.xml
+
+< ! --  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+
+保存并退出。 
+
+重启   测试
