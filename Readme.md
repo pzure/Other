@@ -26,6 +26,8 @@ mysql -uroot -p
 
 grant all on *.* to root@'%' identified by '123456' with grant option;
 
+GRANT ALL PRIVILEGES ON *.* TO '用户'@'%' IDENTIFIED BY '密码' WITH GRANT OPTION;
+
 flush privileges;
 
 # 安装配置Java
