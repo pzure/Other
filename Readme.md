@@ -30,6 +30,10 @@ GRANT ALL PRIVILEGES ON *.* TO '用户'@'%' IDENTIFIED BY '密码' WITH GRANT OP
 
 flush privileges;
 
+新版本mysql更改为密码验证方式：
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
+
 # 安装配置Java
 
 下载 JavaSE
