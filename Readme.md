@@ -38,6 +38,14 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 
 create user 用户名 identified by '密码';
 
+授权访问
+
+grant all privileges on *.* to 用户@localhost identified by '密码';
+
+所有数据库权限
+
+grant all privileges on *.* to 用户@localhost identified by '密码';
+
 # 安装配置Java
 
 下载 JavaSE
