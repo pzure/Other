@@ -34,6 +34,10 @@ flush privileges;
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 
+创建数据库用户
+
+create user 用户名 identified by '密码';
+
 # 安装配置Java
 
 下载 JavaSE
